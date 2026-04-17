@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Float Left Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* STEP 1: Without float - boxes stack vertically */
+        .no-float {
+            background: lightcoral;
+            height: 100px;
+            margin: 10px 0;
+        }
+
+        /* STEP 2: With float:left - boxes go side by side */
+        .float-box {
+            float: left;  /* <-- THIS MAKES BOXES GO SIDE BY SIDE LEFT */
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        .red { background: red; }
+        .blue { background: blue; }
+        .green { background: green; }
+
+        /* STEP 3: CLEAR FLOATS - prevents layout breaking */
+        .container {
+            overflow: hidden;  /* <-- clearfix method, simplest */
+        }
+
+        .clear {
+            clear: both;  /* <-- manual clear */
+        }
+
+        h3 {
+            color: #333;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h2>What does float: left do?</h2>
+    <p><strong>float: left</strong> makes elements move to the LEFT SIDE and allows other content to <strong>wrap around</strong> them side-by-side.</p>
+
+    <h3>1. WITHOUT float (boxes stack)</h3>
+    <div class="no-float">Box 1</div>
+    <div class="no-float">Box 2</div>
+    <div class="no-float">Box 3</div>
+
+    <h3>2. WITH float: left (boxes side by side)</h3>
+    <div class="container">
+        <div class="float-box red">RED BOX</div>
+        <div class="float-box blue">BLUE BOX</div>
+        <div class="float-box green">GREEN BOX</div>
+    </div>
+
+    <h3>3. Manual Clear Example</h3>
+    <div class="float-box red">RED</div>
+    <div class="float-box blue">BLUE</div>
+    <div class="clear"></div> <!-- This stops floating -->
+    <p>Text after clear: This text appears below the floated boxes.</p>
+
+    <h3>Why Clear? Without clearing, layout breaks!</h3>
+    <div style="background: yellow; padding: 20px;">
+        <div class="float-box red">Float without clear</div>
+        <div class="float-box blue">Float without clear</div>
+        <p>This yellow box collapses because floats are not cleared!</p>
+    </div>
+
+    <p style="clear: both;"><strong>Summary:</strong> float:left = side-by-side layout. Always clear floats to prevent issues!</p>
+</body>
+</html>

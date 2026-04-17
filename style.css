@@ -1,0 +1,66 @@
+/* Example 1: Two Column Layout */
+.sidebar {
+  float: left;
+  width: 30%;
+  background-color: #ecf0f1;
+  padding: 20px;
+}
+
+.main-content {
+  float: left;
+  width: 70%;
+  padding: 20px;
+}
+
+/* Example 2: Three Column Layout */
+.col-3 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Example 3: Image with Text Wrapping */
+img.article-image {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.article-text {
+  padding: 10px;
+}
+
+/* Example 4: Navigation Menu (Float Items) */
+.nav-item {
+  float: left;
+  width: 20%;
+  background-color: #34495e;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+/* Example 5: Card Grid Layout */
+.card {
+  float: left;
+  width: 30%;
+  background-color: #fff;
+  margin: 1.5%;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Clearing Floats - Important! */
+.clear {
+  clear: both;
+  height: 0;
+}
+
+.container {
+  overflow: auto;  /* This clears floats automatically */
+}
