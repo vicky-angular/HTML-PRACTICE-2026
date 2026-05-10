@@ -21,6 +21,8 @@ html, body{
     margin:10%;
     align-content: center;
     border-style:dashed;
+    padding-left: 50px;
+    max-width: 100%;
 }
 /* .container-1{
     width:100%;
