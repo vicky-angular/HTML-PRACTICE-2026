@@ -20,7 +20,7 @@ html, body{
     padding: 20px;
     margin:10%;
     align-content: center;
-    border-style:dashed;
+    border-style:solid;
     max-width: 400px;
 }
 /* .container-1{
